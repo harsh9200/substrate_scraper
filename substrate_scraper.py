@@ -183,7 +183,7 @@ class SubstrateScanner:
             )
         return extrinsics_df
 
-    def eras_staking(self, start_era: int = None, eras_range: int = 10) -> pd.DataFrame:
+    def eras_staked(self, start_era: int = None, eras_range: int = 10) -> pd.DataFrame:
         """Get the eras related information.
 
         Args:
@@ -346,4 +346,4 @@ if __name__ == "__main__":
     # rpc_url = "wss://kusama-rpc.polkadot.io"
 
     polkadot_interface = SubstrateScanner(rpc_url)
-    polkadot_interface.era_staked_total(start_era=1010, eras_range=5)
+    polkadot_interface.eras_staked(start_era=1010, eras_range=5)
