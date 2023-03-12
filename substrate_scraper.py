@@ -225,8 +225,8 @@ class SubstrateScanner:
 
             eras_stake_df.loc[idx] = [
                 era_idx,
-                eras_stat_dict.get(era_idx)[0],
-                eras_stat_dict.get(era_idx)[1],
+                eras_stat_dict.get(era_idx, [None, None])[0],
+                eras_stat_dict.get(era_idx, [None, None])[1],
                 len(eras_reward_points.value.get("individual")),
                 eras_total_staked,
                 int(eras_reward_points.value.get("total")),
